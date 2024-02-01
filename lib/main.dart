@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weatherapp/views/dashboard/bottom_nav_screen.dart';
 import 'package:weatherapp/views/splash_screen.dart';
 
 void main() {

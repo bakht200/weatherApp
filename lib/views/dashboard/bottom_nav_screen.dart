@@ -13,11 +13,6 @@ class BottomNavScreen extends StatefulWidget {
 int _currentIndex = 0;
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
-  final BorderRadius _borderRadius = const BorderRadius.only(
-    topLeft: Radius.circular(25),
-    topRight: Radius.circular(25),
-  );
-
   ShapeBorder? bottomBarShape = const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(25)),
   );
