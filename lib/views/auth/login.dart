@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:weatherapp/views/auth/registration.dart';
+import 'package:weatherapp/views/dashboard/bottom_nav_screen.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -145,25 +146,31 @@ class LoginPage extends StatelessWidget {
                       SizedBox(
                         height: 30,
                       ),
-                      FadeInUp(
-                          duration: Duration(milliseconds: 1900),
-                          child: Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                gradient: LinearGradient(colors: [
-                                  Color.fromRGBO(143, 148, 251, 1),
-                                  Color.fromRGBO(143, 148, 251, .6),
-                                ])),
-                            child: Center(
-                              child: Text(
-                                "Login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (builder) => BottomNavScreen()));
+                        },
+                        child: FadeInUp(
+                            duration: Duration(milliseconds: 1900),
+                            child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  gradient: LinearGradient(colors: [
+                                    Color.fromRGBO(143, 148, 251, 1),
+                                    Color.fromRGBO(143, 148, 251, .6),
+                                  ])),
+                              child: Center(
+                                child: Text(
+                                  "Login",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
-                            ),
-                          )),
+                            )),
+                      ),
                       SizedBox(
                         height: 30,
                       ),
